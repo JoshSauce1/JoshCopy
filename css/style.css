@@ -1,0 +1,435 @@
+/*
+Author: Joshua Abreu
+Date: 3/7/21
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, ul {
+margin: 0;
+padding: 0;
+border: 0;
+Scroll-behavior:smooth;
+}
+
+/* Style rule for images */
+img {
+  border: 5px solid white; /* White border */
+   border-radius: 35px;
+   width: 225px;
+   transition: 1s;
+}
+
+img:hover {
+ width: 500px;
+ transform: scale(1.1);
+}
+
+p{
+  color:#555;
+}
+
+
+/* Style rules for mobile viewport*/
+
+/*Hide tab-desk class*/
+
+.tab-desk {
+ display: none;
+ }
+
+
+
+ .btn{
+  display: inline-block;
+  background: red;
+  color:#fff;
+  padding: 8px 40px;
+  margin: 10px;
+  border-radius:30px;
+  transition: 0.5s;
+
+}
+
+
+
+.btn:hover{
+  background: #563434
+}
+
+  a{
+   text-decoration: none;
+ }
+
+.row{
+  display: block;
+  margin-left: auto;
+
+}
+.column {
+  float: left;
+  width: auto;
+  padding: 7%;
+  margin: auto;
+}
+
+
+
+.column h1 {
+  font-size: 50px;
+}
+.column p{
+  font-size: 20px;
+}
+
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.pm {
+  padding: 7%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  overflow: auto;
+}
+
+.pm h1 {
+  font-size: 67px;
+  line-height: 70px;
+  margin:30px 0;
+}
+.pm p{
+  font-size: 1.5625em;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style rules for header content */
+header {
+  display: block;
+overflow: auto;
+text-align: center;
+font-size: 1.5em;
+background-color: #cfcfcf;
+
+
+}
+
+
+/* Style rules for navigation area */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+.brand-title{
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding-left:6%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+.navbar-links{
+  padding-right: 6%;
+  font-size: 1.25rem;
+}
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar-links li{
+  list-style: none;
+}
+.navbar-links li a{
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+.navbar-links li a:hover {
+  color: #555;
+  transition: all .5s ease;
+}
+.toggle-button{
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display:none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Hamburger Menu */
+
+@media(max-width: 740px){
+  .toggle-button{
+    display: flex;
+  }
+  .navbar-links{
+    display: none;
+    width: 100%;
+    font-size: 1.25rem;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    background: black;
+  }
+
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li{
+    text-align: center;
+    padding: 2%;
+
+  }
+
+  .navbar-links li a{
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active{
+    display: flex;
+  }
+
+
+
+
+  .navbar-links.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-links.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg)
+  }
+  .navbar-links.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg)
+  }
+
+
+
+
+  .brand-title{
+    padding-left:6%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+  }
+
+
+}
+/* Style rules for table */
+table {
+ border: 1px solid #373684;
+ border-collapse: collapse;
+ margin: 0 auto;
+ width: 100%;
+ }
+ caption {
+ font-size: 1.5em;
+ font-weight: bold;
+ padding: 1%;
+ }
+ th, td {
+ border: 1px solid black;
+ padding: 2%;
+ }
+ th {
+ background-color: #990000;
+ color: #fff;
+ font-size: 1.15em;
+}
+tr:nth-child(odd) {
+ background-color: #b35f5f;
+
+ }
+
+/* Style rules for main content */
+main {
+
+padding: auto;
+background: radial-gradient(#fff,grey);
+overflow: auto;
+}
+
+
+main p {
+font-size: 1.25em;
+}
+
+body{
+position: relative;
+overflow: auto;
+}
+
+
+body::after {
+  content: '';
+  display: block;
+  height: 100px; /* Set same as footer's height */
+}
+
+.action {
+font-size: 1.25em;
+color: #373684;
+font-weight: bold;
+}
+
+/* ------form------ */
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+.formcontainer {
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  padding-top: 10px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  padding-top: 10px;
+}
+
+.formrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style rules for footer content */
+footer {
+text-align: center;
+
+background-color: black;
+width: 100%;
+
+position: absolute;
+
+   bottom: 0;
+   width: 100%;
+
+   color: white;
+   text-align: center;
+   height: 100px;
+}
+footer a {
+color: #555;;
+text-decoration: none;
+}
+
+
+/* Media Query for Tablet Viewport */
+ @media screen and (min-width: 550px), print {
+
+
+ /* Tablet Viewport: Show tab-desk class, hide mobile class */
+ .tab-desk {
+ display: block;
+ }
+ .mobile {
+ display: none;
+ }
+ .column {
+
+   width: auto;
+
+ }
+
+ /* Tablet Viewport: Style rule for header content */
+ span.tab-desk {
+ display: inline;
+ }
+}
+ /* Tablet Viewport: Style rules for nav area */
+
+
+
+
+
+
+
+/* Media Query for Desktop Viewport. */
+
+@media screen and (min-width: 769px), print {
+
+
+  .column {
+
+    width: 33.33%;
+  }
+
+  .row{
+    padding-left: 12%;
+  }
+
+  .pm{
+    padding-left: 19%;
+  }
+
+  .col-75 {
+    float: left;
+    width: 50%;
+    padding-top: 10px;
+  }
+
+
+}
+
+@media print {
+}
+
+.body{
+  color: #000;
+}
